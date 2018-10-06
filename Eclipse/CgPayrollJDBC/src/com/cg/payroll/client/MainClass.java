@@ -107,6 +107,7 @@ public class MainClass {
 		printDetails(associate[1]);
 		System.out.println("\nDetails of Third Associate");
 		printDetails(associate[2]);*/
+	
 	}
 	
 	public static void printDetails(Associate associate){
