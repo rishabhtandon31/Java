@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LabAssignment1 {
 
-	public static StringBuilder string1= new StringBuilder("California");
+	public static StringBuilder string1= new StringBuilder("Ayusssha");
 	public static void main(String[] args) {
 		System.out.println("Given string is "+string1);
 		int choice;
@@ -55,8 +55,8 @@ public class LabAssignment1 {
 		StringBuilder str= new StringBuilder(string12);
 		for(int i=0;i<str.length()-1;i++){
 			for(int j=i+1 ;j<str.length();j++)
-				if(str.charAt(i) == str.charAt(j))
-					str.deleteCharAt(j);
+				if(str.charAt(i) == str.charAt(j)){
+					str.deleteCharAt(j); j--;}
 		}
 		return str;
 	}

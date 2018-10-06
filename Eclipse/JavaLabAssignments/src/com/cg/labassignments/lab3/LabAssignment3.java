@@ -1,16 +1,29 @@
 package com.cg.labassignments.lab3;
 
-import java.time.Duration;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import java.util.GregorianCalendar;
 public class LabAssignment3 {
-
 	public static void main(String[] args) {
-		Date date1 = new Date(1995, 10, 31);
-		Date date2=new Date();
-		Date date3= new Date(date2.getTime()-date1.getTime());
-		System.out.println(date3.getYear());
+		try {
+			Date date2= new Date();
+			Calendar endCalendar = new GregorianCalendar();
+			endCalendar.setTime(date2);
+			SimpleDateFormat dateformat1 = new SimpleDateFormat("dd/MM/yyyy");
+			Date date1= dateformat1.parse("17/07/2017");
+			Calendar startCalendar = new GregorianCalendar();
+			startCalendar.setTime(date1);
+			//System.out.println(date2);
+			int diffYear = endCalendar.get(Calendar.YEAR) - startCalendar.get(Calendar.YEAR);
+			System.out.println(startCalendar.get(Calendar.YEAR));
+			int diffMonth = diffYear * 12 + endCalendar.get(Calendar.MONTH) - startCalendar.get(Calendar.MONTH);
+			System.out.println("Year :"+diffYear+ " Month: "+diffMonth);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
