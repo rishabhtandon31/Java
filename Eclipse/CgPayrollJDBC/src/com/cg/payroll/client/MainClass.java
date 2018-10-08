@@ -36,8 +36,8 @@ public class MainClass {
 				
 			case 2: 
 				try {
-					System.out.println("Net Salary: " + payrollServices.calculateNetSalary(101));
-					System.out.println("Net Salary: " + payrollServices.calculateNetSalary(102));
+					System.out.println("Net Salary: " + payrollServices.calculateNetSalary(115));
+					System.out.println("Net Salary: " + payrollServices.calculateNetSalary(116));
 				} catch (AssociateDetailNotFoundException | PayrollServicesDownException e) {
 					System.out.println("Associate salary not found");
 					e.printStackTrace();

@@ -1,5 +1,6 @@
 package com.cg.payroll.services;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.cg.payroll.beans.Associate;
@@ -23,7 +24,11 @@ public class PayrollServicesImpl implements PayrollServices{
 			throws PayrollServicesDownException {
 		
 		Associate associate = new Associate(yearlyInvestmentUnder8oC, firstName, lastName, department, designation, pancard, emailId, new BankDetails(accountNumber, bankName, ifscCode), new Salary(basicSalary, epf, companyPf));
-		associate = associateDAO.save(associate);
+		try {
+			associate = associateDAO.save(associate);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return associate.getAssociateID();
 	}
 
@@ -53,6 +58,12 @@ public class PayrollServicesImpl implements PayrollServices{
 		double monthlyTax = annualTax / 12;
 		associate.getSalary().setMonthlyTax(monthlyTax);
 		associate.getSalary().setNetSalary(associate.getSalary().getGrossSalary() - monthlyTax);
+		try {
+			boolean ans=associateDAO.update(associate);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PayrollServicesDownException("Server is down. Please try again later.");
+		}
 		return associate.getSalary().getNetSalary();
 	}
 
@@ -68,7 +79,13 @@ public class PayrollServicesImpl implements PayrollServices{
 	@Override
 	public ArrayList<Associate> getAllAssociatesDetails()
 			throws PayrollServicesDownException {
-		return associateDAO.findAll();
+		try {
+			return associateDAO.findAll();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
+	
 
 }

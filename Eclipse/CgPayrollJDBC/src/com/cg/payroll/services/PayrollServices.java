@@ -17,4 +17,5 @@ public interface PayrollServices {
 	Associate getAssociateDetails(int associateId) throws AssociateDetailNotFoundException, PayrollServicesDownException;
 	
 	ArrayList<Associate> getAllAssociatesDetails() throws PayrollServicesDownException;
+
 }

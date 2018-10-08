@@ -26,7 +26,7 @@ public class Salary {
 
 	public Salary(double basicSalary, double hra, double conveyenceAllowance,
 			double otherAllowance, double personalAllowance, double monthlyTax,
-			double epf, double companyPf, double gratuity, double grossSalary,
+			double epf, double companyPf,  double grossSalary,
 			double netSalary) {
 		super();
 		this.basicSalary = basicSalary;
@@ -37,7 +37,7 @@ public class Salary {
 		this.monthlyTax = monthlyTax;
 		this.epf = epf;
 		this.companyPf = companyPf;
-		this.gratuity = gratuity;
+		//this.gratuity = gratuity;
 		this.grossSalary = grossSalary;
 		this.netSalary = netSalary;
 	}
