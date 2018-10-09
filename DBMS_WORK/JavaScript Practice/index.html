@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>
+		JavaScript App
+		</title></head>
+		<script type="text/javascript" src="windowsObject.js">
+			window.document.testform.showAlert.onclick= showAlertBox();
+		</script>
+	
+	<body>
+		<h1 align="center" >Window Methods Tester</h1>
+		<form action="#" name="testform" id="testform" method="get">
+			<input type="button" name="showAlert" value="showAlert" onclick="showAlertBox();" />
+			<input type="button" name="showConfirm" value="showConfirm" onclick="showConfirmationBox();"/>
+			<input type="button" name="showInput" value="showInput" onclick="showInputBox();"/>
+			<input type="button" value="Open Window" onclick="openIt();"/>
+			<input type="button" value="Close Window" onclick="myWindow.close();"/>
+			<input type="button" value="Focus Window" onclick="if (myWindow) myWindow.focus();"/>
+		</form>
+	</body>
+</html>

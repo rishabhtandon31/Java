@@ -1,0 +1,1 @@
+SELECT staff_name, hiredate, to_char(hiredate,'DY') as "DAY" from staff_master order by to_char(hiredate,'DY');

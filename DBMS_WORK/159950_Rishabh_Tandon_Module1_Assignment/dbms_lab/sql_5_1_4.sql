@@ -1,0 +1,1 @@
+DELETE from employee where dept_name='Sales';

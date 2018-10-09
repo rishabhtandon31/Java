@@ -1,0 +1,1 @@
+CREATE synonym synEmp from EMP;
