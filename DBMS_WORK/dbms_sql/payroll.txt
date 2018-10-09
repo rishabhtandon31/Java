@@ -1,0 +1,33 @@
+CREATE TABLE associate 
+	(associateId number(10) NOT NULL,yearlyInvestmentUnder8oC number(10) NOT NULL);
+
+Alter TABLE associate
+	add (
+		firstName varchar2(10) NOT NULL,
+		lastName varchar2(10),
+		department varchar2(10)	NOT NULL,
+		designation varchar2(10) NOT NULL,
+		pancard varchar(10),
+		emailId varchar(20)
+	);
+
+ALTER TABLE associate
+	add CONSTRAINT id_pk PRIMARY KEY (associateID);
+
+
+
+
+****************************************************************************************************
+
+CREATE TABLE BankDetails
+	(accountNumber number, bankName varchar(10) NOT NULL, ifscCode number NOT NULL, 
+	PRIMARY KEY (accountNumber));
+
+****************************************************************************************************
+
+CREATE TABLE salary
+	(basicSalary number, hra number, conveyenceAllowance number,
+	otherAlloWance number, personaAllowance number, 
+	monthlytax number, epf number, companyPf number,
+	gratuity number, grossSalary number, netSalary number);
+	

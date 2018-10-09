@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/mpt1" xmlns:tns="http://www.example.org/mpt1" elementFormDefault="qualified">
+<element name="electricity_Consumer">
+<complexType>
+	<sequence>
+		
+			<element name="consumerNo">
+			<simpleType>
+				<restriction base="integer">
+					<pattern value="[0-9]{8}"/>
+					<totalDigits value="8"/>
+				</restriction>
+			</simpleType>
+			</element>
+			<element name="ConsumerName">
+			<simpleType>
+				<restriction base="string">
+					<maxLength value="20"></maxLength>
+					<pattern value="[A-Z]{1}[A-Za-z]{2,}"/>
+				</restriction>
+			</simpleType>
+			</element>
+			<element name="emailId" type="string">
+			<simpleType>
+				<restriction base="string">
+					<maxLength value="35"></maxLength>
+				</restriction>
+			</simpleType>
+			</element>
+			<element name="UnitsConsumed">
+			<simpleType>
+				<restriction base="integer">
+					<minInclusive value="0"/>
+				</restriction>
+			</simpleType>
+			</element>
+		
+	</sequence>
+</complexType>
+</element>
+</schema>

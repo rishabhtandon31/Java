@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1001</consumerNo>
+  <ConsumerName>Seema Joshi</ConsumerName>
+  <emailId>Seema.joshi@gmail.com</emailId>
+  <UnitsConsumed>250</UnitsConsumed>
+</electricity_Consumer>
+
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1002</consumerNo>
+  <ConsumerName>Amey Joshi</ConsumerName>
+  <emailId>Amey.j@cg.com</emailId>
+  <UnitsConsumed>345</UnitsConsumed>
+</electricity_Consumer>
+
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1003</consumerNo>
+  <ConsumerName>Pravin</ConsumerName>
+  <emailId>Pravin.t@cg.com</emailId>
+  <UnitsConsumed>457</UnitsConsumed>
+</electricity_Consumer>
+
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1004</consumerNo>
+  <ConsumerName>Manoj Kulkarni</ConsumerName>
+  <emailId>maonj@gmail.com</emailId>
+  <UnitsConsumed>780</UnitsConsumed>
+</electricity_Consumer>
+
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1005</consumerNo>
+  <ConsumerName>Shrikant Shinde</ConsumerName>
+  <emailId>Shrikant.shinde@gmail.com</emailId>
+  <UnitsConsumed>90</UnitsConsumed>
+</electricity_Consumer>
+
+<electricity_Consumer xmlns="http://www.example.org/mpt1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mpt1 mpt1.xsd ">
+  <consumerNo>1006</consumerNo>
+  <ConsumerName>Mahesh B</ConsumerName>
+  <emailId>bMahesh@yahoo.com</emailId>
+  <UnitsConsumed>720</UnitsConsumed>
+</electricity_Consumer>

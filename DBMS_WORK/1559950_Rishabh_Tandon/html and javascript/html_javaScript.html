@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Electricity Consumer Form</title>
+	</head>
+	<body>
+		<h1 align="center">Electricity Consumer Form</h1>
+		<br>
+		
+		<form id="form11" name="form11"  action="#" method="post">
+		
+			<table align="center">
+				
+				<tr align="left">
+					<th>
+						<label for="consumerno">Consumer No :</label>
+						
+					</th>
+					<td><input type="text" id="consumerno" maxlength="8" pattern="[0-9]{8}" required /></td>
+				</tr>
+				
+				<tr align="left">
+					<th>
+						<label for="consumername">Consumer Name :</label>
+						
+					</th>
+					<td><input type="text" id="consumername" pattern="[A-Z]{1}[A-Za-z\s]{2,}" required /></td>
+				</tr>
+				
+				<tr align="left">
+					<th>
+						<label for="emailid">Email Address :</label>
+						
+					</th>
+					<td><input type="email" id="emailid" required /></td>
+				</tr>
+				
+				<tr align="left">
+					<th>
+						<label for="nounits">Number of Units :</label>
+						
+					</th>
+					<td><input type="number" id="nounits" min="0" required /></td>
+				</tr>
+				<tr><td><br></td></tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" id="submitDetails" value="Calculate Electricity Charges and Display" onclick="cal_cost();" /></td>
+				</tr>
+			
+			</table>
+		</form>
+		
+		<script type="text/javascript">
+			var cost1=2.96;
+			var cost2=5.56;
+			var final_charges=0;
+			function cal_cost()
+			{
+				var units=document.getElementById("nounits").value;
+				var consNo=document.getElementById("consumerno").value;
+				var consName=document.getElementById("consumername").value;
+				var consEmail=document.getElementById("emailid").value;
+				if(units>100)
+				{
+					
+					final_charges=(100*cost1)+(units-100)*cost2;
+				}
+				else
+				{
+					final_charges=units*cost1;
+				}
+				var f = document.getElementsByTagName('form')[0];
+				if(f.checkValidity()) {
+				alert("CONSUMER DETAILS:-\n"+"ConsumerNo : "+consNo+"\nConsumerName : "+consName+"\nEmail Address : "+consEmail+"\nNumber of Units : "
+						+units+"\nTotal Charges : "+final_charges);
+			}}
+		</script>
+	</body>
+</html>
