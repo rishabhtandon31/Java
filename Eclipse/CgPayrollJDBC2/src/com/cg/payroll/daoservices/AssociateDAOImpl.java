@@ -18,7 +18,8 @@ public class AssociateDAOImpl implements AssociateDAO{
 	public Associate save(Associate associate) throws SQLException {
 		try{
 			conn.setAutoCommit(false);
-			String sql = "insert into associate ( ASSOCIATEID, YEARLYINVESTMENTUNDER80C, FIRSTNAME, LASTNAME, DEPARTMENT, DESIGNATION, PANCARD,EMAILID) values(ASSOCIATE_ID_SEQ.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into associate ( ASSOCIATEID, yearlyInvestmentUnder8oC, FIRSTNAME, LASTNAME, DEPARTMENT, DESIGNATION, PANCARD,EMAILID) values(ASSOCIATE_ID_SEQ.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			//String sql = "insert into associate ( ASSOCIATEID, FIRSTNAME, LASTNAME, DEPARTMENT, DESIGNATION, PANCARD,EMAILID) values(ASSOCIATE_ID_SEQ.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement pstmt1 = conn.prepareStatement(sql);
 			pstmt1.setInt(1, associate.getYearlyInvestmentUnder8oC());
 			pstmt1.setString(2, associate.getFirstName());
@@ -63,7 +64,7 @@ public class AssociateDAOImpl implements AssociateDAO{
 		ResultSet findAssociateDetailsRS = pstmt1.executeQuery();
 		if(findAssociateDetailsRS.next()){
 			int associateID = findAssociateDetailsRS.getInt("associateid");
-			int yearlyInvestmentUnder8oC = findAssociateDetailsRS.getInt("yearlyInvestmentUnder80C");
+			int yearlyInvestmentUnder8oC = findAssociateDetailsRS.getInt("YEARLYINVESTMENTUNDER8OC");
 			String firstName = findAssociateDetailsRS.getString("firstName");
 			String lastName= findAssociateDetailsRS.getString("lastName");
 			String department= findAssociateDetailsRS.getString("department");
@@ -107,7 +108,7 @@ public class AssociateDAOImpl implements AssociateDAO{
 		ResultSet findAssociateDetailsRS = pstmt1.executeQuery();
 		while(findAssociateDetailsRS.next()){
 			int associateID = findAssociateDetailsRS.getInt("associateid");
-			int yearlyInvestmentUnder8oC = findAssociateDetailsRS.getInt("yearlyInvestmentUnder80C");
+			int yearlyInvestmentUnder8oC = findAssociateDetailsRS.getInt("YEARLYINVESTMENTUNDER8OC");
 			String firstName = findAssociateDetailsRS.getString("firstName");
 			String lastName= findAssociateDetailsRS.getString("lastName");
 			String department= findAssociateDetailsRS.getString("department");
