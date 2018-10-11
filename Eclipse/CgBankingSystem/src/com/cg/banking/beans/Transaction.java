@@ -5,6 +5,7 @@ public class Transaction {
 	private String transactionType;
 	
 	public Transaction() {}
+	
 	public Transaction(float amount, String transactionType) {
 		super();
 		this.amount = amount;
